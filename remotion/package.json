@@ -1,0 +1,26 @@
+{
+    "name": "video-explainer-prototype",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "narrate": "tsx scripts/narrate.ts",
+        "studio": "remotion studio src/index.ts",
+        "render": "tsx scripts/render.ts",
+        "typecheck": "tsc --noEmit"
+    },
+    "dependencies": {
+        "@remotion/bundler": "4.0.529",
+        "@remotion/cli": "4.0.529",
+        "@remotion/paths": "4.0.529",
+        "@remotion/renderer": "4.0.529",
+        "react": "19.3.0",
+        "react-dom": "19.3.0",
+        "remotion": "4.0.529"
+    },
+    "devDependencies": {
+        "@types/node": "22.20.4",
+        "@types/react": "19.3.0",
+        "tsx": "4.23.15",
+        "typescript": "5.9.3"
+    }
+}

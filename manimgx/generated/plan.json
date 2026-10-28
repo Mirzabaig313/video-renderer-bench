@@ -1,0 +1,564 @@
+{
+ "fps": 30,
+ "total_frames": 1082,
+ "scenes": [
+  {
+   "id": "hook",
+   "audio": "audio/hook.wav",
+   "start_frame": 9,
+   "audio_from": 13
+  },
+  {
+   "id": "pipeline",
+   "audio": "audio/pipeline.wav",
+   "start_frame": 121,
+   "audio_from": 125
+  },
+  {
+   "id": "stream",
+   "audio": "audio/stream.wav",
+   "start_frame": 261,
+   "audio_from": 264
+  },
+  {
+   "id": "crash",
+   "audio": "audio/crash.wav",
+   "start_frame": 360,
+   "audio_from": 363
+  },
+  {
+   "id": "inside",
+   "audio": "audio/inside.wav",
+   "start_frame": 437,
+   "audio_from": 441
+  },
+  {
+   "id": "code",
+   "audio": "audio/code.wav",
+   "start_frame": 600,
+   "audio_from": 604
+  },
+  {
+   "id": "recover",
+   "audio": "audio/recover.wav",
+   "start_frame": 736,
+   "audio_from": 739
+  },
+  {
+   "id": "recap",
+   "audio": "audio/recap.wav",
+   "start_frame": 898,
+   "audio_from": 901
+  }
+ ],
+ "cues": {
+  "q_write": {
+   "id": "q_write",
+   "scene": "hook",
+   "do": "writeTitle",
+   "frame": 8,
+   "frames": 36
+  },
+  "q_crash": {
+   "id": "q_crash",
+   "scene": "hook",
+   "do": "indicate",
+   "frame": 74,
+   "frames": 21
+  },
+  "q_dock": {
+   "id": "q_dock",
+   "scene": "pipeline",
+   "do": "dockTitle",
+   "frame": 120,
+   "frames": 21
+  },
+  "producer": {
+   "id": "producer",
+   "scene": "pipeline",
+   "do": "buildPipeline",
+   "frame": 124,
+   "frames": 21
+  },
+  "pipe_pb": {
+   "id": "pipe_pb",
+   "scene": "pipeline",
+   "do": "buildPipeline",
+   "frame": 146,
+   "frames": 21
+  },
+  "broker": {
+   "id": "broker",
+   "scene": "pipeline",
+   "do": "buildPipeline",
+   "frame": 167,
+   "frames": 21
+  },
+  "consumer": {
+   "id": "consumer",
+   "scene": "pipeline",
+   "do": "buildPipeline",
+   "frame": 192,
+   "frames": 21
+  },
+  "pipe_bc": {
+   "id": "pipe_bc",
+   "scene": "pipeline",
+   "do": "buildPipeline",
+   "frame": 214,
+   "frames": 21
+  },
+  "stream": {
+   "id": "stream",
+   "scene": "stream",
+   "do": "streamMessages",
+   "frame": 260,
+   "frames": 9
+  },
+  "fill": {
+   "id": "fill",
+   "scene": "stream",
+   "do": "streamMessages",
+   "frame": 301,
+   "frames": 21
+  },
+  "drain": {
+   "id": "drain",
+   "scene": "stream",
+   "do": "streamMessages",
+   "frame": 324,
+   "frames": 21
+  },
+  "crash": {
+   "id": "crash",
+   "scene": "crash",
+   "do": "crash",
+   "frame": 389,
+   "frames": 21
+  },
+  "zoom": {
+   "id": "zoom",
+   "scene": "inside",
+   "do": "zoomAndOpen",
+   "frame": 437,
+   "frames": 36
+  },
+  "counters": {
+   "id": "counters",
+   "scene": "inside",
+   "do": "zoomAndOpen",
+   "frame": 470,
+   "frames": 21
+  },
+  "await": {
+   "id": "await",
+   "scene": "inside",
+   "do": "zoomAndOpen",
+   "frame": 528,
+   "frames": 21
+  },
+  "split": {
+   "id": "split",
+   "scene": "code",
+   "do": "codeHighlight",
+   "frame": 599,
+   "frames": 36
+  },
+  "work_line": {
+   "id": "work_line",
+   "scene": "code",
+   "do": "codeHighlight",
+   "frame": 658,
+   "frames": 9
+  },
+  "ack_line": {
+   "id": "ack_line",
+   "scene": "code",
+   "do": "codeHighlight",
+   "frame": 694,
+   "frames": 9
+  },
+  "pullback": {
+   "id": "pullback",
+   "scene": "recover",
+   "do": "redeliver",
+   "frame": 735,
+   "frames": 36
+  },
+  "recover": {
+   "id": "recover",
+   "scene": "recover",
+   "do": "redeliver",
+   "frame": 761,
+   "frames": 21
+  },
+  "redeliver": {
+   "id": "redeliver",
+   "scene": "recover",
+   "do": "redeliver",
+   "frame": 794,
+   "frames": 21
+  },
+  "ack": {
+   "id": "ack",
+   "scene": "recover",
+   "do": "redeliver",
+   "frame": 862,
+   "frames": 9
+  },
+  "title_lost": {
+   "id": "title_lost",
+   "scene": "recap",
+   "do": "recap",
+   "frame": 897,
+   "frames": 21
+  },
+  "chip_ack": {
+   "id": "chip_ack",
+   "scene": "recap",
+   "do": "recap",
+   "frame": 931,
+   "frames": 21
+  },
+  "chip_survive": {
+   "id": "chip_survive",
+   "scene": "recap",
+   "do": "recap",
+   "frame": 994,
+   "frames": 21
+  }
+ },
+ "captions": [
+  {
+   "start_ms": 420,
+   "end_ms": 3230,
+   "lines": [
+    "What happens to a message",
+    "if the consumer crashes?"
+   ]
+  },
+  {
+   "start_ms": 4155,
+   "end_ms": 8480,
+   "lines": [
+    "A producer sends messages to a broker,",
+    "and a consumer takes them off the queue."
+   ]
+  },
+  {
+   "start_ms": 8806,
+   "end_ms": 9899,
+   "lines": [
+    "Orders stream in."
+   ]
+  },
+  {
+   "start_ms": 9973,
+   "end_ms": 11789,
+   "lines": [
+    "The queue fills, then drains."
+   ]
+  },
+  {
+   "start_ms": 12106,
+   "end_ms": 13781,
+   "lines": [
+    "Then the consumer crashes."
+   ]
+  },
+  {
+   "start_ms": 14700,
+   "end_ms": 17481,
+   "lines": [
+    "Inside the broker,",
+    "the message is not deleted."
+   ]
+  },
+  {
+   "start_ms": 17568,
+   "end_ms": 19195,
+   "lines": [
+    "It waits, unacknowledged."
+   ]
+  },
+  {
+   "start_ms": 20125,
+   "end_ms": 24308,
+   "lines": [
+    "Consumers acknowledge only after",
+    "the work is done, with channel.ack."
+   ]
+  },
+  {
+   "start_ms": 24641,
+   "end_ms": 27874,
+   "lines": [
+    "When the consumer recovers,",
+    "the broker redelivers the message,"
+   ]
+  },
+  {
+   "start_ms": 27874,
+   "end_ms": 29713,
+   "lines": [
+    "and this time it is acknowledged."
+   ]
+  },
+  {
+   "start_ms": 30040,
+   "end_ms": 31097,
+   "lines": [
+    "Nothing is lost."
+   ]
+  },
+  {
+   "start_ms": 31176,
+   "end_ms": 34374,
+   "lines": [
+    "Ack after the work,",
+    "and every message survives a crash."
+   ]
+  }
+ ],
+ "title": "Message queues \u00b7 Part 2",
+ "sim": {
+  "T_PB": 24,
+  "T_BC": 20,
+  "PROC": 9,
+  "T_ACK": 12,
+  "victim": 8,
+  "crash": 389,
+  "recover": 761,
+  "msgs": [
+   {
+    "i": 0,
+    "label": "{\"order\": 1040}",
+    "spawn": 238,
+    "arrive": 262,
+    "deliveries": [
+     262
+    ],
+    "ack_start": 291,
+    "ack_arrive": 303,
+    "victim": false
+   },
+   {
+    "i": 1,
+    "label": "{\"order\": 1041}",
+    "spawn": 254,
+    "arrive": 278,
+    "deliveries": [
+     278
+    ],
+    "ack_start": 307,
+    "ack_arrive": 319,
+    "victim": false
+   },
+   {
+    "i": 2,
+    "label": "{\"order\": 1042}",
+    "spawn": 270,
+    "arrive": 294,
+    "deliveries": [
+     294
+    ],
+    "ack_start": 323,
+    "ack_arrive": 335,
+    "victim": false
+   },
+   {
+    "i": 3,
+    "label": "{\"order\": 1043}",
+    "spawn": 286,
+    "arrive": 310,
+    "deliveries": [
+     310
+    ],
+    "ack_start": 339,
+    "ack_arrive": 351,
+    "victim": false
+   },
+   {
+    "i": 4,
+    "label": "{\"order\": 1044}",
+    "spawn": 289,
+    "arrive": 313,
+    "deliveries": [
+     322
+    ],
+    "ack_start": 351,
+    "ack_arrive": 363,
+    "victim": false
+   },
+   {
+    "i": 5,
+    "label": "{\"order\": 1045}",
+    "spawn": 292,
+    "arrive": 316,
+    "deliveries": [
+     334
+    ],
+    "ack_start": 363,
+    "ack_arrive": 375,
+    "victim": false
+   },
+   {
+    "i": 6,
+    "label": "{\"order\": 1046}",
+    "spawn": 295,
+    "arrive": 319,
+    "deliveries": [
+     346
+    ],
+    "ack_start": 375,
+    "ack_arrive": 387,
+    "victim": false
+   },
+   {
+    "i": 7,
+    "label": "{\"order\": 1047}",
+    "spawn": 298,
+    "arrive": 322,
+    "deliveries": [
+     358
+    ],
+    "ack_start": 387,
+    "ack_arrive": 399,
+    "victim": false
+   },
+   {
+    "i": 8,
+    "label": "{\"order\": 1048}",
+    "spawn": 301,
+    "arrive": 325,
+    "deliveries": [
+     366,
+     794
+    ],
+    "ack_start": 853,
+    "ack_arrive": 865,
+    "victim": true
+   },
+   {
+    "i": 9,
+    "label": "{\"order\": 1049}",
+    "spawn": 304,
+    "arrive": 328,
+    "deliveries": [
+     869
+    ],
+    "ack_start": 898,
+    "ack_arrive": 910,
+    "victim": false
+   },
+   {
+    "i": 10,
+    "label": "{\"order\": 1050}",
+    "spawn": 307,
+    "arrive": 331,
+    "deliveries": [
+     885
+    ],
+    "ack_start": 914,
+    "ack_arrive": 926,
+    "victim": false
+   },
+   {
+    "i": 11,
+    "label": "{\"order\": 1051}",
+    "spawn": 337,
+    "arrive": 361,
+    "deliveries": [
+     901
+    ],
+    "ack_start": 930,
+    "ack_arrive": 942,
+    "victim": false
+   },
+   {
+    "i": 12,
+    "label": "{\"order\": 1052}",
+    "spawn": 367,
+    "arrive": 391,
+    "deliveries": [
+     917
+    ],
+    "ack_start": 946,
+    "ack_arrive": 958,
+    "victim": false
+   },
+   {
+    "i": 13,
+    "label": "{\"order\": 1053}",
+    "spawn": 397,
+    "arrive": 421,
+    "deliveries": [
+     933
+    ],
+    "ack_start": 962,
+    "ack_arrive": 974,
+    "victim": false
+   },
+   {
+    "i": 14,
+    "label": "{\"order\": 1054}",
+    "spawn": 461,
+    "arrive": 485,
+    "deliveries": [
+     949
+    ],
+    "ack_start": 978,
+    "ack_arrive": 990,
+    "victim": false
+   },
+   {
+    "i": 15,
+    "label": "{\"order\": 1055}",
+    "spawn": 525,
+    "arrive": 549,
+    "deliveries": [
+     965
+    ],
+    "ack_start": 994,
+    "ack_arrive": 1006,
+    "victim": false
+   },
+   {
+    "i": 16,
+    "label": "{\"order\": 1056}",
+    "spawn": 589,
+    "arrive": 613,
+    "deliveries": [
+     981
+    ],
+    "ack_start": 1010,
+    "ack_arrive": 1022,
+    "victim": false
+   },
+   {
+    "i": 17,
+    "label": "{\"order\": 1057}",
+    "spawn": 653,
+    "arrive": 677,
+    "deliveries": [
+     997
+    ],
+    "ack_start": 1026,
+    "ack_arrive": 1038,
+    "victim": false
+   },
+   {
+    "i": 18,
+    "label": "{\"order\": 1058}",
+    "spawn": 717,
+    "arrive": 741,
+    "deliveries": [
+     1013
+    ],
+    "ack_start": 1042,
+    "ack_arrive": 1054,
+    "victim": false
+   }
+  ]
+ }
+}

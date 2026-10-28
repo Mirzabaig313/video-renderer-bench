@@ -1,0 +1,10 @@
+{
+    "name": "video-explainer-hyperframes",
+    "private": true,
+    "type": "module",
+    "description": "HyperFrames renderer spike: same message-queue storyboard as the Remotion and ManimGX prototypes",
+    "dependencies": {
+        "gsap": "3.15.0",
+        "hyperframes": "0.8.181"
+    }
+}

@@ -1,0 +1,99 @@
+name: CPU render benchmark
+
+on:
+  workflow_dispatch:
+    inputs:
+      runs:
+        description: Timed runs per renderer and core count
+        default: "3"
+  push:
+    branches: [main]
+    paths: ["bench/**", ".github/workflows/bench.yml", "remotion/**", "hyperframes/**", "manimgx/**"]
+
+permissions:
+  contents: read
+
+jobs:
+  render:
+    # Public repos get 4 vCPU / 16 GB standard Linux runners, no GPU.
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        renderer: [remotion, hyperframes, manimgx]
+        cores: [4, 2]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Runner info
+        run: |
+          lscpu | head -20; nproc; free -h
+          ls /dev/dri 2>/dev/null || echo "no GPU device"
+
+      - name: System packages
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q ffmpeg fonts-dejavu fonts-liberation \
+            libnss3 libdbus-1-3 libatk1.0-0 libatk-bridge2.0-0 libgbm1 libasound2t64 \
+            libxrandr2 libxkbcommon0 libxfixes3 libxcomposite1 libxdamage1 \
+            libpango-1.0-0 libcairo2 libcups2t64 libdrm2 libxshmfence1
+
+      - uses: actions/setup-node@v4
+        if: matrix.renderer != 'manimgx'
+        with:
+          node-version: "24"
+
+      - uses: actions/setup-python@v5
+        if: matrix.renderer == 'manimgx'
+        with:
+          python-version: "3.13"
+
+      - name: Install remotion
+        if: matrix.renderer == 'remotion'
+        working-directory: remotion
+        run: |
+          npm ci --no-audit --no-fund || npm install --no-audit --no-fund
+          npx remotion browser ensure
+
+      - name: Install hyperframes
+        if: matrix.renderer == 'hyperframes'
+        working-directory: hyperframes
+        run: |
+          npm ci --no-audit --no-fund || npm install --no-audit --no-fund
+          mkdir -p project/vendor && cp node_modules/gsap/dist/gsap.min.js project/vendor/
+
+      - name: Install manimgx
+        if: matrix.renderer == 'manimgx'
+        working-directory: manimgx
+        run: |
+          python -m venv .venv
+          .venv/bin/pip install -q -r requirements.txt
+
+      - name: Benchmark
+        run: bash bench/bench.sh ${{ matrix.renderer }} ${{ matrix.cores }} ${{ inputs.runs || '3' }}
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: result-${{ matrix.renderer }}-${{ matrix.cores }}c
+          path: results/
+          retention-days: 14
+
+  summary:
+    needs: render
+    if: always()
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: result-*
+          path: all
+      - name: Summary table
+        run: python3 bench/summary.py all | tee -a "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: summary
+          path: all/summary.json
+          retention-days: 30

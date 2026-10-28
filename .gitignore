@@ -1,0 +1,9 @@
+node_modules/
+.venv/
+.tmp/
+results/
+out/
+hyperframes/project/vendor/
+hyperframes/project/.hyperframes/
+__pycache__/
+.DS_Store

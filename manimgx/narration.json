@@ -1,0 +1,605 @@
+{
+  "voice": "Samantha",
+  "rate_wpm": 190,
+  "method": "say + silencedetect span + proportional character weights (estimate)",
+  "scenes": [
+    {
+      "id": "hook",
+      "audio": "audio/hook.wav",
+      "audio_ms": 2755,
+      "speech_ms": {
+        "start": 0,
+        "end": 2560
+      },
+      "marks": [
+        {
+          "index": 0,
+          "text": "What",
+          "start_ms": 0,
+          "end_ms": 234
+        },
+        {
+          "index": 1,
+          "text": "happens",
+          "start_ms": 262,
+          "end_ms": 636
+        },
+        {
+          "index": 2,
+          "text": "to",
+          "start_ms": 664,
+          "end_ms": 804
+        },
+        {
+          "index": 3,
+          "text": "a",
+          "start_ms": 832,
+          "end_ms": 925
+        },
+        {
+          "index": 4,
+          "text": "message",
+          "start_ms": 953,
+          "end_ms": 1327
+        },
+        {
+          "index": 5,
+          "text": "if",
+          "start_ms": 1355,
+          "end_ms": 1495
+        },
+        {
+          "index": 6,
+          "text": "the",
+          "start_ms": 1523,
+          "end_ms": 1710
+        },
+        {
+          "index": 7,
+          "text": "consumer",
+          "start_ms": 1738,
+          "end_ms": 2158
+        },
+        {
+          "index": 8,
+          "text": "crashes?",
+          "start_ms": 2186,
+          "end_ms": 2560
+        }
+      ]
+    },
+    {
+      "id": "pipeline",
+      "audio": "audio/pipeline.wav",
+      "audio_ms": 4271,
+      "speech_ms": {
+        "start": 0,
+        "end": 4075
+      },
+      "marks": [
+        {
+          "index": 0,
+          "text": "A",
+          "start_ms": 0,
+          "end_ms": 91
+        },
+        {
+          "index": 1,
+          "text": "producer",
+          "start_ms": 118,
+          "end_ms": 527
+        },
+        {
+          "index": 2,
+          "text": "sends",
+          "start_ms": 554,
+          "end_ms": 826
+        },
+        {
+          "index": 3,
+          "text": "messages",
+          "start_ms": 853,
+          "end_ms": 1262
+        },
+        {
+          "index": 4,
+          "text": "to",
+          "start_ms": 1289,
+          "end_ms": 1425
+        },
+        {
+          "index": 5,
+          "text": "a",
+          "start_ms": 1452,
+          "end_ms": 1543
+        },
+        {
+          "index": 6,
+          "text": "broker,",
+          "start_ms": 1570,
+          "end_ms": 1888
+        },
+        {
+          "index": 7,
+          "text": "and",
+          "start_ms": 2070,
+          "end_ms": 2251
+        },
+        {
+          "index": 8,
+          "text": "a",
+          "start_ms": 2278,
+          "end_ms": 2369
+        },
+        {
+          "index": 9,
+          "text": "consumer",
+          "start_ms": 2396,
+          "end_ms": 2805
+        },
+        {
+          "index": 10,
+          "text": "takes",
+          "start_ms": 2832,
+          "end_ms": 3104
+        },
+        {
+          "index": 11,
+          "text": "them",
+          "start_ms": 3131,
+          "end_ms": 3358
+        },
+        {
+          "index": 12,
+          "text": "off",
+          "start_ms": 3385,
+          "end_ms": 3567
+        },
+        {
+          "index": 13,
+          "text": "the",
+          "start_ms": 3594,
+          "end_ms": 3776
+        },
+        {
+          "index": 14,
+          "text": "queue.",
+          "start_ms": 3803,
+          "end_ms": 4075
+        }
+      ]
+    },
+    {
+      "id": "stream",
+      "audio": "audio/stream.wav",
+      "audio_ms": 2920,
+      "speech_ms": {
+        "start": 0,
+        "end": 2731
+      },
+      "marks": [
+        {
+          "index": 0,
+          "text": "Orders",
+          "start_ms": 0,
+          "end_ms": 324
+        },
+        {
+          "index": 1,
+          "text": "stream",
+          "start_ms": 352,
+          "end_ms": 676
+        },
+        {
+          "index": 2,
+          "text": "in.",
+          "start_ms": 704,
+          "end_ms": 843
+        },
+        {
+          "index": 3,
+          "text": "The",
+          "start_ms": 1167,
+          "end_ms": 1352
+        },
+        {
+          "index": 4,
+          "text": "queue",
+          "start_ms": 1380,
+          "end_ms": 1658
+        },
+        {
+          "index": 5,
+          "text": "fills,",
+          "start_ms": 1686,
+          "end_ms": 1964
+        },
+        {
+          "index": 6,
+          "text": "then",
+          "start_ms": 2149,
+          "end_ms": 2381
+        },
+        {
+          "index": 7,
+          "text": "drains.",
+          "start_ms": 2409,
+          "end_ms": 2733
+        }
+      ]
+    },
+    {
+      "id": "crash",
+      "audio": "audio/crash.wav",
+      "audio_ms": 1614,
+      "speech_ms": {
+        "start": 0,
+        "end": 1424
+      },
+      "marks": [
+        {
+          "index": 0,
+          "text": "Then",
+          "start_ms": 0,
+          "end_ms": 256
+        },
+        {
+          "index": 1,
+          "text": "the",
+          "start_ms": 287,
+          "end_ms": 492
+        },
+        {
+          "index": 2,
+          "text": "consumer",
+          "start_ms": 523,
+          "end_ms": 984
+        },
+        {
+          "index": 3,
+          "text": "crashes.",
+          "start_ms": 1015,
+          "end_ms": 1425
+        }
+      ]
+    },
+    {
+      "id": "inside",
+      "audio": "audio/inside.wav",
+      "audio_ms": 4445,
+      "speech_ms": {
+        "start": 0,
+        "end": 4246
+      },
+      "marks": [
+        {
+          "index": 0,
+          "text": "Inside",
+          "start_ms": 0,
+          "end_ms": 337
+        },
+        {
+          "index": 1,
+          "text": "the",
+          "start_ms": 366,
+          "end_ms": 558
+        },
+        {
+          "index": 2,
+          "text": "broker,",
+          "start_ms": 587,
+          "end_ms": 924
+        },
+        {
+          "index": 3,
+          "text": "the",
+          "start_ms": 1117,
+          "end_ms": 1309
+        },
+        {
+          "index": 4,
+          "text": "message",
+          "start_ms": 1338,
+          "end_ms": 1723
+        },
+        {
+          "index": 5,
+          "text": "is",
+          "start_ms": 1752,
+          "end_ms": 1896
+        },
+        {
+          "index": 6,
+          "text": "not",
+          "start_ms": 1925,
+          "end_ms": 2117
+        },
+        {
+          "index": 7,
+          "text": "deleted.",
+          "start_ms": 2146,
+          "end_ms": 2531
+        },
+        {
+          "index": 8,
+          "text": "It",
+          "start_ms": 2868,
+          "end_ms": 3012
+        },
+        {
+          "index": 9,
+          "text": "waits,",
+          "start_ms": 3041,
+          "end_ms": 3330
+        },
+        {
+          "index": 10,
+          "text": "unacknowledged.",
+          "start_ms": 3523,
+          "end_ms": 4245
+        }
+      ]
+    },
+    {
+      "id": "code",
+      "audio": "audio/code.wav",
+      "audio_ms": 4136,
+      "speech_ms": {
+        "start": 0,
+        "end": 3934
+      },
+      "marks": [
+        {
+          "index": 0,
+          "text": "Consumers",
+          "start_ms": 0,
+          "end_ms": 493
+        },
+        {
+          "index": 1,
+          "text": "acknowledge",
+          "start_ms": 523,
+          "end_ms": 1114
+        },
+        {
+          "index": 2,
+          "text": "only",
+          "start_ms": 1144,
+          "end_ms": 1390
+        },
+        {
+          "index": 3,
+          "text": "after",
+          "start_ms": 1420,
+          "end_ms": 1715
+        },
+        {
+          "index": 4,
+          "text": "the",
+          "start_ms": 1745,
+          "end_ms": 1942
+        },
+        {
+          "index": 5,
+          "text": "work",
+          "start_ms": 1972,
+          "end_ms": 2218
+        },
+        {
+          "index": 6,
+          "text": "is",
+          "start_ms": 2248,
+          "end_ms": 2395
+        },
+        {
+          "index": 7,
+          "text": "done,",
+          "start_ms": 2425,
+          "end_ms": 2671
+        },
+        {
+          "index": 8,
+          "text": "with",
+          "start_ms": 2868,
+          "end_ms": 3115
+        },
+        {
+          "index": 9,
+          "text": "channel.ack.",
+          "start_ms": 3145,
+          "end_ms": 3933
+        }
+      ]
+    },
+    {
+      "id": "recover",
+      "audio": "audio/recover.wav",
+      "audio_ms": 5019,
+      "speech_ms": {
+        "start": 0,
+        "end": 4824
+      },
+      "marks": [
+        {
+          "index": 0,
+          "text": "When",
+          "start_ms": 0,
+          "end_ms": 221
+        },
+        {
+          "index": 1,
+          "text": "the",
+          "start_ms": 248,
+          "end_ms": 424
+        },
+        {
+          "index": 2,
+          "text": "consumer",
+          "start_ms": 451,
+          "end_ms": 848
+        },
+        {
+          "index": 3,
+          "text": "recovers,",
+          "start_ms": 875,
+          "end_ms": 1272
+        },
+        {
+          "index": 4,
+          "text": "the",
+          "start_ms": 1449,
+          "end_ms": 1625
+        },
+        {
+          "index": 5,
+          "text": "broker",
+          "start_ms": 1652,
+          "end_ms": 1961
+        },
+        {
+          "index": 6,
+          "text": "redelivers",
+          "start_ms": 1988,
+          "end_ms": 2473
+        },
+        {
+          "index": 7,
+          "text": "the",
+          "start_ms": 2500,
+          "end_ms": 2676
+        },
+        {
+          "index": 8,
+          "text": "message,",
+          "start_ms": 2703,
+          "end_ms": 3056
+        },
+        {
+          "index": 9,
+          "text": "and",
+          "start_ms": 3233,
+          "end_ms": 3409
+        },
+        {
+          "index": 10,
+          "text": "this",
+          "start_ms": 3436,
+          "end_ms": 3656
+        },
+        {
+          "index": 11,
+          "text": "time",
+          "start_ms": 3683,
+          "end_ms": 3903
+        },
+        {
+          "index": 12,
+          "text": "it",
+          "start_ms": 3930,
+          "end_ms": 4062
+        },
+        {
+          "index": 13,
+          "text": "is",
+          "start_ms": 4089,
+          "end_ms": 4221
+        },
+        {
+          "index": 14,
+          "text": "acknowledged.",
+          "start_ms": 4248,
+          "end_ms": 4822
+        }
+      ]
+    },
+    {
+      "id": "recap",
+      "audio": "audio/recap.wav",
+      "audio_ms": 4269,
+      "speech_ms": {
+        "start": 0,
+        "end": 4083
+      },
+      "marks": [
+        {
+          "index": 0,
+          "text": "Nothing",
+          "start_ms": 0,
+          "end_ms": 375
+        },
+        {
+          "index": 1,
+          "text": "is",
+          "start_ms": 403,
+          "end_ms": 544
+        },
+        {
+          "index": 2,
+          "text": "lost.",
+          "start_ms": 572,
+          "end_ms": 807
+        },
+        {
+          "index": 3,
+          "text": "Ack",
+          "start_ms": 1136,
+          "end_ms": 1323
+        },
+        {
+          "index": 4,
+          "text": "after",
+          "start_ms": 1351,
+          "end_ms": 1633
+        },
+        {
+          "index": 5,
+          "text": "the",
+          "start_ms": 1661,
+          "end_ms": 1849
+        },
+        {
+          "index": 6,
+          "text": "work,",
+          "start_ms": 1877,
+          "end_ms": 2112
+        },
+        {
+          "index": 7,
+          "text": "and",
+          "start_ms": 2300,
+          "end_ms": 2487
+        },
+        {
+          "index": 8,
+          "text": "every",
+          "start_ms": 2515,
+          "end_ms": 2797
+        },
+        {
+          "index": 9,
+          "text": "message",
+          "start_ms": 2825,
+          "end_ms": 3201
+        },
+        {
+          "index": 10,
+          "text": "survives",
+          "start_ms": 3229,
+          "end_ms": 3652
+        },
+        {
+          "index": 11,
+          "text": "a",
+          "start_ms": 3680,
+          "end_ms": 3774
+        },
+        {
+          "index": 12,
+          "text": "crash.",
+          "start_ms": 3802,
+          "end_ms": 4084
+        }
+      ]
+    }
+  ]
+}

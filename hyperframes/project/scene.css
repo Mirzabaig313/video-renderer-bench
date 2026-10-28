@@ -1,0 +1,15 @@
+/* Static styles for the HyperFrames composition (theme matches prototypes/video-explainer/src/theme.ts). */
+html, body { margin: 0; background: #070b18; }
+#root { position: relative; width: 1920px; height: 1080px; overflow: hidden; background: #070b18; }
+#stage { position: absolute; inset: 0; }
+#captions {
+  position: absolute; left: 0; right: 0; bottom: 54px;
+  display: none; justify-content: center; pointer-events: none;
+}
+#captions.on { display: flex; }
+#captions .box {
+  background: rgba(4, 7, 16, 0.78); border-radius: 14px; padding: 10px 26px;
+  text-align: center; white-space: nowrap; color: #f4f7ff;
+  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif; font-weight: 600; font-size: 42px; line-height: 1.28;
+}
+#captions .box:empty { display: none; }
